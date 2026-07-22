@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-
 
 int checkIfGameOver(int board[]){
 
@@ -47,7 +45,21 @@ int main(){
     scanf("%c", &clear);
     printf("-----------------------\n");
 
+    // Clear input buffer
+    while ((clear = getchar()) != '\n' && clear != EOF); 
+
     printBoard(board);
+
+    printf("Enter the row you want to place: ");
+    scanf("%c", &clear);
+
+    while ((clear = getchar()) != '\n' && clear != EOF); 
+
+    printf("Enter the column you want to place: ");
+    scanf("%c", &clear);
+
+    while ((clear = getchar()) != '\n' && clear != EOF); 
+
 
     return 0;
 }
